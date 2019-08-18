@@ -43,21 +43,38 @@
 				</view>
 			<view class="kaifagaozhi">
 				<view class="title">
-					<p>交易须知</p>
+					<p>开发准备</p>
 				</view>
-					<p class="p1"> 1、项目开发过程中不允许更改功能模块，否则视为二次开发</p>
-					<p class="p1"> 2、不接受先开发后付款的交易方式（可以协商预付）</p>
-					<p class="p1"> 3、因沟通中可能出现不同的分歧。但请相信沟通后会提供让您满意的结果。</p>
-					<p class="p1"> 4、我方没有违背卖家原有开发意愿，中途不允许退款。</p>
-          </view>       
+				<view>
+					<p class="p1"> 1、首先需要准备个体户或者企业营业执照用于开通微信企业号</p>
+					<p class="p1"> 2、需要理清小程序具体的面向内容，以便开发审核需要填写类目</p>
+					<p class="p1"> 3、需要准备300元人民币用于向微信提交资质审核（这笔钱直接打到微信运营账号）</p>
+					<p class="p1"> 4、需要协商准备开发内容后台数据的存储方式和架构，以便后期维护和管理</p>
+					<p class="p1"> 5、确定开发后，所需要准备的各种内容资料，包括文字图片等等。以及协商UI风格</p>
+				</view>	
+		  </view>       
 		<view class="kaifagaozhi2">
 			<view class="title">
-					<p >售后服务</p>
+					<p >交易须知</p>
              </view>
+				<view>	
 					<p class="p1"> 1、项目开发过程中不允许更改功能模块，否则视为二次开发</p>
 					<p class="p1"> 2、不接受先开发后付款的交易方式（可以协商预付）</p>
 					<p class="p1"> 3、因沟通中可能出现不同的分歧。但请相信沟通后会提供让您满意的结果。</p>
 					<p class="p1"> 4、我方没有违背卖家原有开发意愿，中途不允许退款。</p>
+				</view>	
+			</view>
+		</view>
+		<view class="kaifagaozhi3">
+			<view class="title">
+					<p >售后服务</p>
+		     </view>
+				<view>
+					<p class="p1"> 1、项目开发过程中不允许更改功能模块，否则视为二次开发</p>
+					<p class="p1"> 2、不接受先开发后付款的交易方式（可以协商预付）</p>
+					<p class="p1"> 3、因沟通中可能出现不同的分歧。但请相信沟通后会提供让您满意的结果。</p>
+					<p class="p1"> 4、我方没有违背卖家原有开发意愿，中途不允许退款。</p>
+				</view>
 			</view>
 		</view>
 </view>
@@ -302,8 +319,11 @@ export default {
 	
 	.p1 {
 		margin-left : 40upx ;
-		font-size: $uni-font-size-ssm;
+		font-size: $uni-font-size-sm;
 		color :#2719D0;
+		text-align: left;
+		margin-top: 40upx ;
+		line-height: 30upx ;
 	}
 	
 	.kaifagaozhi2 {
@@ -311,4 +331,8 @@ export default {
 		
 	}
 	
+	.kaifagaozhi3 {
+		@extend .dingzhilist ;
+		
+	}
 </style>
