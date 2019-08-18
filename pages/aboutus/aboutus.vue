@@ -42,7 +42,7 @@
 	</view>
 </template>
 <script>
-	import navigationBar from '../components/navigationBar'
+	import navigationBar from '../../components/navigationBar'
 	import {get} from '../../api/homepage.js'
 
 	export default {

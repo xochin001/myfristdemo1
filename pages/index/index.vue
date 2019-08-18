@@ -30,19 +30,20 @@
 	</view>
 	    <view class="context">
 			<homepage v-if="tabIndex===0"/>
-			<lock v-if="tabIndex===1"/>
+			<lock v-if="tabIndex===1"/> 
 			<interactive v-if="tabIndex===2"/>
+		   
 		</view>
 	</view>
 </view>
 </template>
 
 <script>
-	import navigationBar from '../components/navigationBar.vue'
+	import navigationBar from '../../components/navigationBar.vue'
 	import {get} from '../../api/homepage.js'
-	import homepage from '@/pages/detail/homepage.vue'
-	import lock from '@/pages/detail/lock.vue'
-	import interactive from '@/pages/detail/interactive.vue'
+	import homepage from '../detail/homepage.vue'
+	import lock from '../detail/lock.vue'
+	import interactive from '../detail/interactive.vue'
 	export default {
 		components:{
 			navigationBar,
@@ -58,7 +59,6 @@
 			  imgs:'',
 			  tabIndex: 0,
 			  scrollInto: "",
-			  tabIndex:0 ,
 			  tabBars:[{
 				  name:'主页',
 				  id:'zhuye',
@@ -206,7 +206,7 @@
 		
 	#fix {
 		  position: fixed;
-		  top:  127upx;
+		  top:  124upx;
 		  left: 0;
 		  width: 100%;
 		  z-index: 10;

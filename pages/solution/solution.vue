@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import navigationBar from '../components/navigationBar.vue'
+import navigationBar from '../../components/navigationBar.vue'
 import { get } from '../../api/homepage.js'
 
 export default {

@@ -13,14 +13,13 @@
 </template>
 
 <script>
- import navigationBar from '../../components/navigationBar'
- import {webUrl} from "../../common/utils/config"
- import {login} from "../../api/homepage"
+ import navigationBar from '../../components/navigationBar.vue'
+ import {login,host} from "../../api/homepage.js"
  var qcloud = require("wafer2-client-sdk/index.js")
   export default {
     created() {},
     mounted() {
-      qcloud.setLoginUrl(webUrl + "/api/login")
+      qcloud.setLoginUrl(host + "/api/login")
     },
     data() {
       return {
@@ -85,7 +84,7 @@
 </script>
 <style lang='scss'>
   .login {
-    background:url('../../../static/images/background.jpg');
+    background:url('../../static/background.jpg');
     background-repeat:repeat;
   width: 100wv;
   height: 100vh;
@@ -94,7 +93,7 @@
   .logo {
     width: 230rpx;
     height: 80rpx;
-    background: url('/static/images/denglu.png') no-repeat;
+    background: url('../../static/denglu.png') no-repeat;
     background-size: 100% 100%;
     margin: 200rpx auto 0 auto;
   }

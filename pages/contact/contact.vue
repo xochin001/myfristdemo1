@@ -76,8 +76,8 @@
  
 </template>
 <script>
-import navigationBar from '../../components/navigationBar'
-import { toLogin, login, post ,get} from "../../api/homepage"
+import navigationBar from '../../components/navigationBar.vue'
+import { toLogin, login, post ,get} from "../../api/homepage.js"
 
 export default {
   onShow() {
@@ -99,7 +99,7 @@ export default {
 
   data() {
     return {
-      avator: "/static/images/denglu.png",
+      avator: "../../static/denglu.png",
       videoTitle: '我要定制',
       userInfo: {},
       username: '',
@@ -114,7 +114,7 @@ export default {
     toLogin() {
       if (!this.userInfo.avatarUrl) {
         wx.navigateTo({
-          url: "/pages/login/main"
+          url: "/pages/login/login"
         });
       }
     },

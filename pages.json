@@ -8,15 +8,28 @@
 			}
 		},{
 			"path":"pages/login/login",
-			"style":{}
+			"style":{
+				"navigationBarTitleText": "用户登陆",
+				"navigationStyle":"custom"
+				}
 		
 		},{
 			"path":"pages/contact/contact",
-			"style":{}
+			"style":{
+				"navigationBarTitleText": "和我联系",
+				"navigationStyle":"custom"
+			}
 		
 		},{
-			"path":"pages/components/navigationBar",
-			"style":{}
+			"path":"pages/fangan/fangan",
+			"style":{
+				"navigationBarTextStyle":"black"
+			}
+		},{
+			"path":"pages/article/article",
+			"style":{
+				"navigationBarTextStyle":"black"
+			}
 		},{
 			"path": "pages/solution/solution",
 			"style": {
@@ -29,15 +42,6 @@
 				"navigationBarTextStyle":"关于瑞宝星工作室",
 				"navigationStyle":"custom"
 			}
-		},{
-			"path":"pages/detail/homepage",
-			"style":{}
-		},{
-			"path":"pages/detail/lock",
-			"style":{}
-		},{
-			"path":"pages/detail/interactive",
-			"style":{}
 		}
 		
 	],
@@ -67,6 +71,11 @@
 			"iconPath":"static/solution.png",
 			"selectedIconPath":"static/solution-active.png",
 			"text":"方案"
+		},{
+			"pagePath":"pages/contact/contact",
+			"iconPath":"static/contact.png",
+			"selectedIconPath":"static/contact-active.png",
+			"text":"我的"
 		}
 		]
 		

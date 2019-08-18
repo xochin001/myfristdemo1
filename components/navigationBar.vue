@@ -10,7 +10,7 @@
       <!-- 标题栏 -->
       <cover-view class="nav-titlebar" :style="{height: titleBarHeight + 'px' }">
         <cover-view class="opt opt-home">
-          <cover-image class="home-image" src="../../static/logo.png" ></cover-image>
+          <cover-image class="home-image" src="/static/logo.png" ></cover-image>
         </cover-view>
         <!-- 标题 -->
         <cover-view class="bar-title" :style="[{color:titleColor}]">{{title}}</cover-view>
