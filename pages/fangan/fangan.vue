@@ -1,9 +1,9 @@
 <template>
-  <div>
-      <div class="content">
+  <view>
+      <view class="content">
         <u-parse :content="context"/>
-      </div>
-  </div>
+      </view>
+  </view>
 </template>
 <script>
 import {get } from '../../api/homepage'

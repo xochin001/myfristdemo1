@@ -41,7 +41,7 @@
 				<view class="bar_tubiao" @click="to_pinglun(articleid )">
 					<view class="icon1" >
 						<span>{{pingluns.length}}</span>
-							<img src="/static/images/pinglun.png" alt="">
+							<img src="/static/pinglun.png" alt="">
 					</view>
 						<p>评论</p>
 					</view>
@@ -59,9 +59,9 @@
 	</view>
 </template>
 <script>
-import { formatTime} from '../../common/utils/index'
-import { login ,get ,post } from '../../api/homepage'
-import uParse from '@/components/u-parse/u-parse.vue'
+	import { formatTime} from '../../common/utils/index'
+	import { login ,get ,post } from '../../api/homepage'
+	import uParse from '@/components/u-parse/u-parse.vue'
 
 export default {
   created(){
@@ -131,7 +131,7 @@ export default {
     to_pinglun(id){
       if(login()){
       wx.navigateTo({
-            url:"../comment/main?id=" +id 
+            url:"../comment/comment?id=" +id 
           })
     }else{
           wx.showToast({
@@ -140,8 +140,8 @@ export default {
               duration: 1500,
               mask: true,
             })
-           setTimeout(function(){wx.navigateTo({
-            url:"/pages/login/main"
+           setTimeout(function(){uni.navigateTo({
+            url:"/pages/login/login"
           })
           },1500)
          
@@ -244,6 +244,7 @@ export default {
       justify-content: center;
       padding-top: 1rpx;
       background-color: #e7ebed;
+	  
       .articles{
         width:100%;
 

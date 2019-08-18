@@ -1,7 +1,6 @@
   <template>
     <view>
-		<view class="article-title">
-			
+		<view class="article-title">	
 			<ul class="article" @click="toArticleDetail(item.article_id)" v-for="(item , index) in articles" :key="index">
 				<li class="title">
 					<view class ="title-content">{{item.title}}</view>

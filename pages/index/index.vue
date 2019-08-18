@@ -32,8 +32,15 @@
 			<homepage v-if="tabIndex===0"/>
 			<lock v-if="tabIndex===1"/> 
 			<interactive v-if="tabIndex===2"/>
-		   
 		</view>
+		<view class="mask" :hidden='flags'>
+			<view class="mask-content">
+			  <img class="mask-img" :src='mskurl' alt="" >
+			  </view>
+		<cover-view class="close" @click='changeFlag'>
+			  <img  class="close-img" src="../../static/close.png" alt="">
+	</cover-view>
+  </view>
 	</view>
 </view>
 </template>
@@ -53,6 +60,8 @@
 		},
 		data() {
 			return {
+				mskurl:'https://www.jingsoftware.com/img/xiaochengxu_kaifa/haibao2.png',
+				flags: false,
 			  navBarHeight: 0,
 			  fixtop: false,
 			  videoTitle: '瑞宝星微程序开发',
@@ -122,6 +131,9 @@
 			    let index = e.target.dataset.current || e.currentTarget.dataset.current;
 				this.tabIndex = index
 			},
+			changeFlag(){
+				this.flags = true 
+			}
 		}
 	}
 </script>
@@ -213,14 +225,46 @@
 		  animation: move 0.2s linear;
 	}
 	.context{
-		//border: 1px solid red;
 		 width:95%;
 		 margin: 20upx auto;
 		 border-radius: 10upx;  
 	}
 	
+	.mask {
+		  position:fixed;
+		  background: rgba(0, 0, 0, 0.4);
+		  top:0;
+		  left:0;
+		  opacity:0.9;
+		  display: flex;
+		  width:100vw;
+		  height:100vh;
+		  justify-content: center;
+		  flex-direction: column;
+		  align-items: center;
+	  
+	}
+	
+	.mask-img {
+		
+		width: 90vw;
+		height: 90vh;
+
+	}
+	
+	.close {
+		margin-top: -90upx;
+	}
+	
+	.close-img {
+		width: 60upx;
+		height: 60upx;
+	}
 	
 	
+
+	
+
 	
 	
 

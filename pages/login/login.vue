@@ -1,15 +1,15 @@
 <template>
-  <div>
+  <view>
   <navigationBar :title="videoTitle" :titleColor="'black'"></navigationBar>
-  <div class="login">
+  <view class="login">
       
-    <div class="logo">
-    </div>
+    <view class="logo">
+    </view>
     <button class="login-btn" open-type="getUserInfo" lang="zh_CN" @getuserinfo="doLogin">微信登录</button>
     <button class="login-btn" @click="goTo()">返回登录</button>
     <button class="login-btn" @click="clear()">清除缓存</button>
-  </div>
-  </div>
+  </view>
+  </view>
 </template>
 
 <script>
@@ -83,20 +83,18 @@
 
 </script>
 <style lang='scss'>
-  .login {
+	.login {
     background:url('../../static/background.jpg');
     background-repeat:repeat;
-  width: 100wv;
-  height: 100vh;
-  box-sizing: border-box;
-  padding-top: 1rpx;
+	width: 100wv;
+	height: 100vh;
+	padding-top: 10upx;
+	}
+	
   .logo {
-    width: 230rpx;
-    height: 80rpx;
-    background: url('../../static/denglu.png') no-repeat;
-    background-size: 100% 100%;
-    margin: 200rpx auto 0 auto;
+	  
   }
+  
   .login-btn {
     text-align: center;
     background: #b4a078;
@@ -107,6 +105,6 @@
     font-size: 28rpx;
     margin-top: 30rpx;
   }
-}
+
 
 </style>
