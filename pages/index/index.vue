@@ -213,7 +213,7 @@
 		  animation: move 0.2s linear;
 	}
 	.context{
-		border: 1px solid red;
+		//border: 1px solid red;
 		 width:95%;
 		 margin: 20upx auto;
 		 border-radius: 10upx;  
